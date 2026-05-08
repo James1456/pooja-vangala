@@ -2,8 +2,6 @@
 
 React + Vite fashion landing page inspired by the provided luxury home screen reference.
 
-This project is prepared for GitHub Pages deployment using the repository slug `pooja-vangala`.
-
 ## Background image
 
 Place your hero image at:
@@ -21,8 +19,8 @@ npm install
 npm run dev
 ```
 
-## GitHub Pages
+## Firebase Hosting
 
-When pushed to a GitHub repository named `pooja-vangala`, the site is set up to deploy through GitHub Actions to:
+This project is configured to deploy to the Firebase project:
 
-`https://<your-github-username>.github.io/pooja-vangala/`
+`pooja-vangala`
