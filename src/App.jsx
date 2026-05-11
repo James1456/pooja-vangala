@@ -219,7 +219,6 @@ export default function App() {
         </video>
 
         <div className="feature-film-overlay" aria-hidden="true" />
-        <BrandHeader />
 
         <div className="feature-film-content">
           <div className="feature-film-copy">
