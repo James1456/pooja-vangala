@@ -8,6 +8,32 @@ const suggestions = [
 
 const backgroundImages = ["/herobg.png", "/herobg2.png"];
 const collectionVideos = ["/sum.mp4", "/sum1.mp4", "/sum2.mp4"];
+const collectionCards = [
+  {
+    title: "Solstice Embroidered Lehenga",
+    price: "$4,860",
+    image: "/herobg.png",
+    position: "52% center",
+  },
+  {
+    title: "Moonlit Tulle Cocktail Set",
+    price: "$2,140",
+    image: "/herobg2.png",
+    position: "58% center",
+  },
+  {
+    title: "Aster Tailored Evening Edit",
+    price: "$1,980",
+    image: "/herobg.png",
+    position: "68% center",
+  },
+  {
+    title: "Velora Corset Skirt Ensemble",
+    price: "$4,220",
+    image: "/herobg2.png",
+    position: "48% center",
+  },
+];
 
 function HistoryIcon() {
   return (
@@ -232,6 +258,39 @@ export default function App() {
             setPrompt={setCollectionPrompt}
             id="collectionPrompt"
           />
+        </div>
+      </section>
+
+      <section className="collections-showcase" aria-label="New collections">
+        <div className="collections-heading">
+          <h2>New Collections</h2>
+          <button className="collections-button" type="button">
+            View All
+          </button>
+        </div>
+
+        <div className="collections-grid">
+          {collectionCards.map((card) => (
+            <article key={card.title} className="collection-card">
+              <button className="collection-favorite" type="button" aria-label={`Save ${card.title}`}>
+                <HeartIcon />
+              </button>
+
+              <div className="collection-image-shell">
+                <img
+                  className="collection-image"
+                  src={card.image}
+                  alt={card.title}
+                  style={{ objectPosition: card.position }}
+                />
+              </div>
+
+              <div className="collection-meta">
+                <h3>{card.title}</h3>
+                <p>{card.price}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </main>
