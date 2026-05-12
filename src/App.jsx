@@ -7,7 +7,6 @@ const suggestions = [
 ];
 
 const backgroundImages = ["/herobg.png", "/herobg2.png"];
-const collectionVideos = ["/sum.mp4", "/sum1.mp4", "/sum2.mp4"];
 const makingVideos = ["/making.mp4", "/making1.mp4"];
 const collectionCards = [
   {
@@ -225,9 +224,7 @@ function PromptBar({ label, prompt, setPrompt, id }) {
 
 export default function App() {
   const [prompt, setPrompt] = useState("I’m looking for an outfit for an elegant dinner");
-  const [collectionPrompt, setCollectionPrompt] = useState("I need an outfit for a summer evening event");
   const [activeSlide, setActiveSlide] = useState(0);
-  const [activeCollectionVideo, setActiveCollectionVideo] = useState(0);
   const [activeMakingVideo, setActiveMakingVideo] = useState(0);
 
   useEffect(() => {
@@ -238,18 +235,6 @@ export default function App() {
     const intervalId = window.setInterval(() => {
       setActiveSlide((currentSlide) => (currentSlide + 1) % backgroundImages.length);
     }, 5000);
-
-    return () => window.clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    if (collectionVideos.length < 2) {
-      return undefined;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setActiveCollectionVideo((currentVideo) => (currentVideo + 1) % collectionVideos.length);
-    }, 7000);
 
     return () => window.clearInterval(intervalId);
   }, []);
@@ -301,37 +286,6 @@ export default function App() {
           </div>
 
           <PromptBar label="Style assistant" prompt={prompt} setPrompt={setPrompt} id="stylePrompt" />
-        </div>
-      </section>
-
-      <section className="feature-film" aria-label="Summer collection 2026">
-        <video
-          key={collectionVideos[activeCollectionVideo]}
-          className="feature-film-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster="/herobg2.png"
-        >
-          <source src={collectionVideos[activeCollectionVideo]} type="video/mp4" />
-        </video>
-
-        <div className="feature-film-overlay" aria-hidden="true" />
-
-        <div className="feature-film-content">
-          <div className="feature-film-copy">
-            <h2>Sculpted Sunlight</h2>
-            <p>Summer Collection 2026</p>
-          </div>
-
-          <PromptBar
-            label="Summer collection assistant"
-            prompt={collectionPrompt}
-            setPrompt={setCollectionPrompt}
-            id="collectionPrompt"
-          />
         </div>
       </section>
 
