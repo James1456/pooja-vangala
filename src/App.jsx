@@ -8,6 +8,7 @@ const suggestions = [
 
 const backgroundImages = ["/herobg.png", "/herobg2.png"];
 const collectionVideos = ["/sum.mp4", "/sum1.mp4", "/sum2.mp4"];
+const makingVideos = ["/making.mp4", "/making1.mp4"];
 const collectionCards = [
   {
     title: "Solstice Embroidered Lehenga",
@@ -31,6 +32,66 @@ const collectionCards = [
     title: "Velora Corset Skirt Ensemble",
     price: "$4,220",
     image: "/herobg2.png",
+    position: "48% center",
+  },
+];
+
+const categoryCards = [
+  {
+    title: "Lehengas",
+    subtitle: "Embroidered volume and fluid silhouettes",
+    image: "/herobg.png",
+    position: "52% center",
+  },
+  {
+    title: "Cocktail Sets",
+    subtitle: "Sculpted evening separates with shimmer",
+    image: "/herobg2.png",
+    position: "56% center",
+  },
+  {
+    title: "Sarees",
+    subtitle: "Modern drapes with couture detailing",
+    image: "/herobg.png",
+    position: "68% center",
+  },
+  {
+    title: "Gowns",
+    subtitle: "Soft tailoring for statement entrances",
+    image: "/herobg2.png",
+    position: "48% center",
+  },
+  {
+    title: "Menswear",
+    subtitle: "Textured layering with runway drama",
+    image: "/herobg.png",
+    position: "64% center",
+  },
+  {
+    title: "Bridal Edit",
+    subtitle: "Heirloom craftsmanship in luminous tones",
+    image: "/herobg2.png",
+    position: "50% center",
+  },
+];
+
+const mensCollectionCards = [
+  {
+    title: "Shadow Linen Bandhgala",
+    subtitle: "Tailored evening structure in charcoal tones",
+    image: "/herobg.png",
+    position: "66% center",
+  },
+  {
+    title: "Slate Embroidered Kurta Set",
+    subtitle: "Soft layering with tonal surface detailing",
+    image: "/herobg2.png",
+    position: "56% center",
+  },
+  {
+    title: "Ivory Drape Jacket",
+    subtitle: "Modern occasionwear with sculpted movement",
+    image: "/herobg.png",
     position: "48% center",
   },
 ];
@@ -167,6 +228,7 @@ export default function App() {
   const [collectionPrompt, setCollectionPrompt] = useState("I need an outfit for a summer evening event");
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeCollectionVideo, setActiveCollectionVideo] = useState(0);
+  const [activeMakingVideo, setActiveMakingVideo] = useState(0);
 
   useEffect(() => {
     if (backgroundImages.length < 2) {
@@ -188,6 +250,18 @@ export default function App() {
     const intervalId = window.setInterval(() => {
       setActiveCollectionVideo((currentVideo) => (currentVideo + 1) % collectionVideos.length);
     }, 7000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    if (makingVideos.length < 2) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveMakingVideo((currentVideo) => (currentVideo + 1) % makingVideos.length);
+    }, 6500);
 
     return () => window.clearInterval(intervalId);
   }, []);
@@ -293,6 +367,127 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      <section className="categories-showcase" aria-label="Shop by category">
+        <div className="collections-heading categories-heading">
+          <h2>Categories</h2>
+          <button className="collections-button" type="button">
+            Explore All
+          </button>
+        </div>
+
+        <div className="categories-grid">
+          {categoryCards.map((card) => (
+            <article key={card.title} className="category-card">
+              <div className="category-image-shell">
+                <img
+                  className="category-image"
+                  src={card.image}
+                  alt={card.title}
+                  style={{ objectPosition: card.position }}
+                />
+              </div>
+
+              <div className="category-meta">
+                <h3>{card.title}</h3>
+                <p>{card.subtitle}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="making-film" aria-label="Explore the making">
+        <video
+          key={makingVideos[activeMakingVideo]}
+          className="making-film-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="/herobg.png"
+        >
+          <source src={makingVideos[activeMakingVideo]} type="video/mp4" />
+        </video>
+
+        <div className="making-film-overlay" aria-hidden="true" />
+
+        <div className="making-film-content">
+          <div className="making-film-copy">
+            <p>Craft, detail, and movement</p>
+            <h2>Explore the Making</h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="mens-showcase" aria-label="PV men collection">
+        <div className="mens-showcase-copy">
+          <p className="mens-showcase-kicker">For him</p>
+          <h2>PV Men Collection</h2>
+          <p className="mens-showcase-text">
+            Precision tailoring, textured layers, and occasion silhouettes shaped for a quieter kind
+            of statement.
+          </p>
+          <button className="collections-button mens-showcase-button" type="button">
+            Discover Menswear
+          </button>
+        </div>
+
+        <div className="mens-showcase-grid">
+          {mensCollectionCards.map((card) => (
+            <article key={card.title} className="mens-card">
+              <div className="mens-card-image-shell">
+                <img
+                  className="mens-card-image"
+                  src={card.image}
+                  alt={card.title}
+                  style={{ objectPosition: card.position }}
+                />
+              </div>
+
+              <div className="mens-card-meta">
+                <h3>{card.title}</h3>
+                <p>{card.subtitle}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <footer className="site-footer" aria-label="Footer">
+        <div className="site-footer-brand">
+          <img className="site-footer-logo" src="/logo.png" alt="" aria-hidden="true" />
+          <p className="site-footer-name">Pooja Vangala</p>
+          <p className="site-footer-tagline">Crafted for modern heirlooms</p>
+        </div>
+
+        <nav className="site-footer-primary" aria-label="Footer navigation">
+          <a href="#top">Home</a>
+          <span aria-hidden="true">•</span>
+          <a href="#collections">Collections</a>
+          <span aria-hidden="true">•</span>
+          <a href="#categories">Categories</a>
+          <span aria-hidden="true">•</span>
+          <a href="#making">Making</a>
+          <span aria-hidden="true">•</span>
+          <a href="mailto:hello@poojavangala.com">Contact</a>
+        </nav>
+
+        <div className="site-footer-divider" aria-hidden="true" />
+
+        <nav className="site-footer-secondary" aria-label="Footer secondary navigation">
+          <a href="mailto:atelier@poojavangala.com">Atelier</a>
+          <a href="mailto:press@poojavangala.com">Press</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </nav>
+
+        <div className="site-footer-meta">
+          <p>© 2026 Pooja Vangala. All rights reserved.</p>
+          <p>Designed for an elevated couture experience.</p>
+        </div>
+      </footer>
     </main>
   );
 }
