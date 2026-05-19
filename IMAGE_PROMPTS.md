@@ -126,3 +126,31 @@ Use these for the redesigned Collections page. Keep the collection videos unchan
 
 12. Collections Appointment Background
     Prompt: Dark luxury couture atelier interior with dress form, hanging garments, flowers, and warm amber lights, refined Indian fashion house mood, cinematic shadows, elegant appointment consultation atmosphere, wide horizontal composition, no text.
+
+## About Page Premium Prompts
+
+Use these for the redesigned About page. Replace the founder image with her real portrait when ready.
+
+1. Founder Hero Portrait From Reference
+   Prompt: Using the provided reference photo of Pooja Vangala, preserve her facial identity and natural features. Create a premium editorial portrait of her seated in a luxury Indian couture atelier, wearing refined black or deep espresso designer clothing, surrounded by ivory embroidered garments, dress forms, fabric samples, and warm atelier light. Calm confident expression, elegant posture, timeless fashion founder portrait, cinematic but realistic, horizontal composition, no text, no logo.
+
+2. Founder Story Portrait From Reference
+   Prompt: Using the provided reference photo of Pooja Vangala, preserve her facial identity and natural features. Create an intimate editorial portrait of her at an atelier table with couture embroidery samples, sketches, and ivory fabric, wearing a soft champagne or ivory blouse, warm side light, thoughtful profile or three-quarter pose, quiet luxury mood, vertical composition, no text, no logo.
+
+3. Atelier Quote Background
+   Prompt: Dark luxury Indian couture atelier interior, dress forms, embroidered garments, flowers, fabric rolls, warm amber lamps, deep espresso shadows, refined cinematic atmosphere, wide horizontal composition with open center area for overlaid quote, no text, no logo.
+
+4. Handwork Craft Image
+   Prompt: Close-up of artisan hands doing hand embroidery on ivory couture fabric, pearls, zari, sequins, delicate threadwork, warm macro editorial lighting, luxury Indian atelier craftsmanship, horizontal crop, no text.
+
+5. Drape Craft Image
+   Prompt: Ivory couture draping on a dress form, flowing silk and muslin folds, pins visible, warm atelier window light, refined quiet luxury mood, horizontal crop, no text.
+
+6. Fittings Craft Image
+   Prompt: Couture fitting moment in an Indian designer atelier, artisan adjusting an embroidered bodice or lehenga on a dress form or model, ivory and champagne tones, precise handwork, warm cinematic light, horizontal crop, no text.
+
+7. Studio Principles Detail
+   Prompt: Elegant atelier still life with sketches, measuring tape, pearls, thread, fabric swatches, and embroidery samples on a parchment table, warm natural light, timeless Indian couture studio mood, horizontal composition, no text.
+
+8. About Appointment Background
+   Prompt: Dark premium couture consultation room with dress forms, hanging embroidered garments, flowers, fabric table, and warm amber lighting, intimate appointment atmosphere, refined Indian fashion house mood, wide horizontal composition, no text.

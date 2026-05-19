@@ -2191,6 +2191,406 @@ video {
   text-transform: uppercase;
 }
 
+.about-editorial {
+  --about-ink: #2a1f18;
+  --about-muted: rgba(42, 31, 24, 0.62);
+  --about-cream: #fffdf9;
+  --about-paper: #f4ede4;
+  --about-gold: #aa7d4a;
+  --about-line: rgba(42, 31, 24, 0.14);
+  background: var(--about-cream);
+  color: var(--about-ink);
+}
+
+.about-editorial-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  min-height: 78vh;
+  background: var(--about-paper);
+}
+
+.about-editorial-hero-image,
+.about-editorial-story-image,
+.about-editorial-craft-image {
+  overflow: hidden;
+  background: #d8cec1;
+}
+
+.about-editorial-hero-image img,
+.about-editorial-story-image img,
+.about-editorial-craft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-editorial-hero-copy {
+  display: grid;
+  align-content: center;
+  padding: 120px 72px 96px;
+}
+
+.about-editorial-hero-copy h1,
+.about-editorial-story-copy h2,
+.about-editorial-quote blockquote,
+.about-editorial-craft-intro h2,
+.about-editorial-craft-item h3,
+.about-editorial-contact-copy h2 {
+  margin: 0;
+  font-family: "Didot", "Bodoni 72", "Iowan Old Style", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.about-editorial-hero-copy h1 {
+  font-size: clamp(5rem, 8.4vw, 9.2rem);
+}
+
+.about-editorial-hero-copy p {
+  position: relative;
+  max-width: 430px;
+  margin: 42px 0 0;
+  padding-top: 28px;
+  color: var(--about-muted);
+  font-size: 14px;
+  letter-spacing: 0.24em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.about-editorial-hero-copy p::before,
+.about-editorial-kicker::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  background: rgba(170, 125, 74, 0.72);
+}
+
+.about-editorial-hero-copy p::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-editorial-story {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+  gap: 80px;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 94px 48px;
+}
+
+.about-editorial-story-image {
+  height: 640px;
+}
+
+.about-editorial-story-copy {
+  max-width: 560px;
+}
+
+.about-editorial-kicker {
+  display: inline-block;
+  color: var(--about-muted);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.about-editorial-kicker::after {
+  margin-top: 16px;
+}
+
+.about-editorial-story-copy h2 {
+  margin-top: 34px;
+  font-size: clamp(3.2rem, 5vw, 5.8rem);
+}
+
+.about-editorial-story-copy p,
+.about-editorial-craft-intro p,
+.about-editorial-craft-item p,
+.about-editorial-principle p,
+.about-editorial-contact-copy p {
+  color: var(--about-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.about-editorial-story-copy p {
+  margin: 24px 0 0;
+}
+
+.about-editorial-philosophy {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 76px 48px;
+  background: var(--about-paper);
+}
+
+.about-editorial-philosophy-card {
+  padding: 34px 46px;
+  border-right: 1px solid var(--about-line);
+}
+
+.about-editorial-philosophy-card:last-child {
+  border-right: 0;
+}
+
+.about-editorial-philosophy-card div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.about-editorial-philosophy-card span,
+.about-editorial-principle span {
+  color: rgba(132, 91, 53, 0.86);
+  font-family: "Didot", "Bodoni 72", "Iowan Old Style", "Times New Roman", serif;
+  font-size: 1.8rem;
+}
+
+.about-editorial-philosophy-card i {
+  height: 1px;
+  background: rgba(132, 91, 53, 0.42);
+}
+
+.about-editorial-philosophy-card h3,
+.about-editorial-principle h3 {
+  margin: 28px 0 0;
+  font-family: "Didot", "Bodoni 72", "Iowan Old Style", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-editorial-philosophy-card p,
+.about-editorial-principle p {
+  margin: 16px 0 0;
+}
+
+.about-editorial-quote {
+  position: relative;
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 72px 48px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.96);
+  background: url("/Atelier%20Quote%20Background.png") center / cover;
+}
+
+.about-editorial-quote-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 7, 6, 0.82), rgba(10, 7, 6, 0.38), rgba(10, 7, 6, 0.82));
+  z-index: -1;
+}
+
+.about-editorial-quote blockquote {
+  max-width: 760px;
+  font-size: clamp(3rem, 5.2vw, 6rem);
+}
+
+.about-editorial-quote span {
+  display: block;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 4rem;
+  line-height: 0.7;
+}
+
+.about-editorial-craft {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: 72px;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 96px 48px;
+}
+
+.about-editorial-craft-intro {
+  max-width: 420px;
+}
+
+.about-editorial-craft-intro h2 {
+  margin-top: 34px;
+  font-size: clamp(3rem, 4.2vw, 4.8rem);
+}
+
+.about-editorial-craft-intro p {
+  margin: 26px 0 0;
+}
+
+.about-editorial-craft-list {
+  display: grid;
+  gap: 0;
+}
+
+.about-editorial-craft-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.95fr) minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--about-line);
+}
+
+.about-editorial-craft-item + .about-editorial-craft-item {
+  padding-top: 24px;
+}
+
+.about-editorial-craft-image {
+  height: 210px;
+}
+
+.about-editorial-craft-item h3 {
+  font-size: clamp(2.1rem, 2.8vw, 3.3rem);
+  text-transform: uppercase;
+}
+
+.about-editorial-craft-item p {
+  margin: 16px 0 0;
+  max-width: 340px;
+}
+
+.about-editorial-principles {
+  padding: 72px 48px 86px;
+  background: var(--about-paper);
+}
+
+.about-editorial-principles-head {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
+  gap: 48px;
+  align-items: end;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.about-editorial-principles-image {
+  height: 260px;
+  overflow: hidden;
+  background: #d8cec1;
+}
+
+.about-editorial-principles-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-editorial-principle-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1320px;
+  margin: 44px auto 0;
+  border-top: 1px solid rgba(132, 91, 53, 0.3);
+}
+
+.about-editorial-principle {
+  position: relative;
+  padding-top: 28px;
+}
+
+.about-editorial-principle::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(132, 91, 53, 0.62);
+}
+
+.about-editorial-principle h3 {
+  margin-top: 24px;
+  font-size: 1.35rem;
+}
+
+.about-editorial-principle p {
+  font-size: 13px;
+}
+
+.about-editorial-contact {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 72px;
+  align-items: center;
+  min-height: 62vh;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 86px 48px;
+  color: rgba(255, 255, 255, 0.96);
+  background: url("/About%20Appointment%20Background.png") center / cover;
+}
+
+.about-editorial-contact-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.about-editorial-contact-shade {
+  background: linear-gradient(90deg, rgba(8, 5, 4, 0.86), rgba(8, 5, 4, 0.44), rgba(8, 5, 4, 0.76));
+  z-index: -1;
+}
+
+.about-editorial-contact-copy {
+  max-width: 560px;
+}
+
+.about-editorial-contact-copy .about-editorial-kicker,
+.about-editorial-contact-details {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.about-editorial-contact-copy h2 {
+  margin-top: 32px;
+  font-size: clamp(3.4rem, 5.4vw, 6rem);
+}
+
+.about-editorial-contact-copy p {
+  max-width: 440px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.about-editorial-contact-copy a {
+  display: inline-block;
+  margin-top: 30px;
+  border: 1px solid rgba(170, 125, 74, 0.8);
+  padding: 13px 22px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about-editorial-contact-details {
+  display: grid;
+  gap: 26px;
+  margin: 0;
+  padding-left: 72px;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
 .contact-page {
   background: #f4efe8;
   color: var(--ink);
@@ -2662,6 +3062,77 @@ video {
     grid-column: 2;
   }
 
+  .about-editorial-hero,
+  .about-editorial-story,
+  .about-editorial-craft,
+  .about-editorial-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-editorial-hero-image {
+    min-height: 620px;
+  }
+
+  .about-editorial-hero-copy {
+    padding: 72px 28px;
+  }
+
+  .about-editorial-story,
+  .about-editorial-craft {
+    gap: 48px;
+    padding: 78px 28px;
+  }
+
+  .about-editorial-story-image {
+    height: 560px;
+  }
+
+  .about-editorial-philosophy {
+    grid-template-columns: 1fr;
+    padding: 62px 28px;
+  }
+
+  .about-editorial-philosophy-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--about-line);
+    padding-inline: 0;
+  }
+
+  .about-editorial-philosophy-card:last-child {
+    border-bottom: 0;
+  }
+
+  .about-editorial-craft-item {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-editorial-principles {
+    padding: 62px 28px 72px;
+  }
+
+  .about-editorial-principles-head {
+    grid-template-columns: 1fr;
+  }
+
+  .about-editorial-principles-image {
+    height: 320px;
+  }
+
+  .about-editorial-principle-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-editorial-contact {
+    gap: 44px;
+    padding: 78px 28px;
+  }
+
+  .about-editorial-contact-details {
+    padding-left: 0;
+    border-left: 0;
+  }
+
   .collections-luxury-hero {
     min-height: 72vh;
     padding: 128px 28px 72px;
@@ -2903,6 +3374,66 @@ video {
 
   .about-premium-process-item p {
     grid-column: auto;
+  }
+
+  .about-editorial-hero-image {
+    min-height: 480px;
+  }
+
+  .about-editorial-hero-copy {
+    padding: 56px 18px;
+  }
+
+  .about-editorial-hero-copy h1 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .about-editorial-hero-copy p {
+    font-size: 12px;
+  }
+
+  .about-editorial-story,
+  .about-editorial-craft,
+  .about-editorial-philosophy,
+  .about-editorial-principles,
+  .about-editorial-contact {
+    padding-inline: 18px;
+  }
+
+  .about-editorial-story-image {
+    height: 440px;
+  }
+
+  .about-editorial-story-copy h2,
+  .about-editorial-craft-intro h2,
+  .about-editorial-contact-copy h2 {
+    font-size: clamp(3rem, 14vw, 4.2rem);
+  }
+
+  .about-editorial-quote {
+    min-height: 320px;
+    padding: 58px 18px;
+  }
+
+  .about-editorial-quote blockquote {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .about-editorial-craft-image {
+    height: 240px;
+  }
+
+  .about-editorial-principle-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-editorial-principles-image {
+    height: 240px;
+  }
+
+  .about-editorial-contact {
+    min-height: 72vh;
   }
 
   .collections-luxury-hero {
