@@ -822,6 +822,375 @@ video {
   font-size: 14px;
 }
 
+.collections-luxury {
+  --collection-ink: #211813;
+  --collection-muted: rgba(33, 24, 19, 0.64);
+  --collection-cream: #fffdf9;
+  --collection-gold: #b0834e;
+  background: var(--collection-cream);
+  color: var(--collection-ink);
+}
+
+.collections-luxury-hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 120px 48px 86px;
+  text-align: center;
+}
+
+.collections-luxury-hero-video,
+.collections-luxury-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.collections-luxury-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.collections-luxury-hero-shade {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06), transparent 34%),
+    linear-gradient(90deg, rgba(9, 7, 6, 0.78), rgba(9, 7, 6, 0.3), rgba(9, 7, 6, 0.78)),
+    linear-gradient(180deg, rgba(9, 7, 6, 0.18), rgba(9, 7, 6, 0.7));
+  z-index: -2;
+}
+
+.collections-luxury-hero-copy {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.collections-luxury-hero-copy h1,
+.collections-luxury-intro-copy h2,
+.collections-luxury-feature-copy h2,
+.collections-luxury-world h3,
+.collections-luxury-appointment-copy h2 {
+  margin: 0;
+  font-family: "Didot", "Bodoni 72", "Iowan Old Style", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.collections-luxury-hero-copy h1 {
+  font-size: clamp(5rem, 9vw, 9.6rem);
+}
+
+.collections-luxury-hero-copy p {
+  max-width: 520px;
+  margin: 28px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.collections-luxury-intro {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 1fr);
+  background: var(--collection-cream);
+}
+
+.collections-luxury-intro-copy {
+  display: grid;
+  align-content: center;
+  max-width: 570px;
+  padding: 98px 72px 96px;
+}
+
+.collections-luxury-kicker {
+  display: inline-block;
+  color: var(--collection-muted);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.collections-luxury-kicker::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 1px;
+  margin-top: 16px;
+  background: rgba(176, 131, 78, 0.72);
+}
+
+.collections-luxury-intro-copy h2 {
+  margin-top: 36px;
+  font-size: clamp(3.4rem, 5.2vw, 6.2rem);
+}
+
+.collections-luxury-intro-copy p {
+  margin: 24px 0 0;
+  color: var(--collection-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.collections-luxury-intro-image {
+  min-height: 660px;
+  overflow: hidden;
+  background: #d8cec1;
+}
+
+.collections-luxury-intro-image img,
+.collections-luxury-product-image img,
+.collections-luxury-feature-image img,
+.collections-luxury-world img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collections-luxury-products {
+  padding: 76px 48px 80px;
+  background: var(--collection-cream);
+}
+
+.collections-luxury-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.collections-luxury-product {
+  position: relative;
+  text-align: center;
+}
+
+.collections-luxury-heart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  color: rgba(255, 255, 255, 0.86);
+  cursor: pointer;
+}
+
+.collections-luxury-heart svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.collections-luxury-product-image {
+  height: 520px;
+  overflow: hidden;
+  background: #ddd4c7;
+}
+
+.collections-luxury-product-meta {
+  padding-top: 18px;
+}
+
+.collections-luxury-product-meta h3,
+.collections-luxury-product-meta p {
+  margin: 0;
+}
+
+.collections-luxury-product-meta h3 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collections-luxury-product-meta p {
+  margin-top: 8px;
+  color: var(--collection-muted);
+  font-size: 13px;
+}
+
+.collections-luxury-view-all {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  color: var(--collection-ink);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.collections-luxury-view-all::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  margin: 12px auto 0;
+  background: rgba(176, 131, 78, 0.72);
+}
+
+.collections-luxury-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  min-height: 520px;
+  background: #16100d;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.collections-luxury-feature-image {
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.collections-luxury-feature-copy {
+  display: grid;
+  align-content: center;
+  max-width: 520px;
+  padding: 72px;
+}
+
+.collections-luxury-feature-copy .collections-luxury-kicker,
+.collections-luxury-appointment-copy .collections-luxury-kicker {
+  color: rgba(176, 131, 78, 0.86);
+}
+
+.collections-luxury-feature-copy h2 {
+  margin-top: 30px;
+  font-size: clamp(3rem, 4.3vw, 5.2rem);
+}
+
+.collections-luxury-feature-copy p {
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.collections-luxury-feature-copy a,
+.collections-luxury-appointment-copy a {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 30px;
+  border: 1px solid rgba(176, 131, 78, 0.72);
+  padding: 13px 22px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.collections-luxury-worlds {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 82px 48px;
+  background: var(--collection-cream);
+}
+
+.collections-luxury-world {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: end center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 34px 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.collections-luxury-world img,
+.collections-luxury-world-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.collections-luxury-world img {
+  z-index: -3;
+}
+
+.collections-luxury-world-shade {
+  background: linear-gradient(180deg, rgba(13, 9, 7, 0.04), rgba(13, 9, 7, 0.76));
+  z-index: -2;
+}
+
+.collections-luxury-world h3 {
+  font-size: clamp(2.4rem, 3vw, 3.6rem);
+}
+
+.collections-luxury-world p {
+  margin: 14px auto 0;
+  max-width: 24ch;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.collections-luxury-world a {
+  display: inline-block;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.collections-luxury-world a::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin: 10px auto 0;
+  background: rgba(176, 131, 78, 0.86);
+}
+
+.collections-luxury-appointment {
+  position: relative;
+  min-height: 56vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 86px 48px;
+  color: rgba(255, 255, 255, 0.96);
+  background:
+    linear-gradient(90deg, rgba(10, 7, 6, 0.92), rgba(10, 7, 6, 0.48)),
+    url("/Collections%20Appointment%20Background.png") center / cover;
+}
+
+.collections-luxury-appointment-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 5, 4, 0.78), rgba(7, 5, 4, 0.18), rgba(7, 5, 4, 0.62));
+  z-index: -1;
+}
+
+.collections-luxury-appointment-copy {
+  max-width: 560px;
+}
+
+.collections-luxury-appointment-copy h2 {
+  margin-top: 30px;
+  font-size: clamp(3rem, 4.8vw, 5.4rem);
+}
+
+.collections-luxury-appointment-copy p {
+  max-width: 420px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2293,6 +2662,45 @@ video {
     grid-column: 2;
   }
 
+  .collections-luxury-hero {
+    min-height: 72vh;
+    padding: 128px 28px 72px;
+  }
+
+  .collections-luxury-intro,
+  .collections-luxury-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-luxury-intro-copy,
+  .collections-luxury-feature-copy {
+    max-width: none;
+    padding: 78px 28px;
+  }
+
+  .collections-luxury-intro-image,
+  .collections-luxury-feature-image {
+    min-height: 540px;
+  }
+
+  .collections-luxury-products,
+  .collections-luxury-worlds {
+    padding-inline: 28px;
+  }
+
+  .collections-luxury-product-grid,
+  .collections-luxury-worlds {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .collections-luxury-product-image {
+    height: 460px;
+  }
+
+  .collections-luxury-appointment {
+    padding: 78px 28px;
+  }
+
   .making-luxury-hero {
     padding: 140px 28px 68px;
   }
@@ -2495,6 +2903,58 @@ video {
 
   .about-premium-process-item p {
     grid-column: auto;
+  }
+
+  .collections-luxury-hero {
+    min-height: 68vh;
+    padding: 118px 18px 58px;
+  }
+
+  .collections-luxury-hero-copy h1 {
+    font-size: clamp(4rem, 18vw, 6.2rem);
+  }
+
+  .collections-luxury-hero-copy p {
+    font-size: 11px;
+  }
+
+  .collections-luxury-intro-copy,
+  .collections-luxury-feature-copy {
+    padding: 64px 18px;
+  }
+
+  .collections-luxury-intro-copy h2,
+  .collections-luxury-feature-copy h2,
+  .collections-luxury-appointment-copy h2 {
+    font-size: clamp(3rem, 14vw, 4.2rem);
+  }
+
+  .collections-luxury-intro-image,
+  .collections-luxury-feature-image {
+    min-height: 430px;
+  }
+
+  .collections-luxury-products,
+  .collections-luxury-worlds {
+    padding: 58px 18px;
+  }
+
+  .collections-luxury-product-grid,
+  .collections-luxury-worlds {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-luxury-product-image {
+    height: 500px;
+  }
+
+  .collections-luxury-world {
+    min-height: 410px;
+  }
+
+  .collections-luxury-appointment {
+    min-height: 64vh;
+    padding: 68px 18px;
   }
 
   .making-luxury-hero {

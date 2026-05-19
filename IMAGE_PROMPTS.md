@@ -86,3 +86,43 @@ Use these for the redesigned Making page. Keep the existing making videos and ap
 
 7. Final Movement
    Prompt: Nearly finished couture garment on a dress form beside a mirror in a quiet atelier, ivory and champagne fabric catching soft light, hand-finished embroidery, elegant shadows, premium Indian designer studio, cinematic luxury campaign style.
+
+## Collections Page Premium Prompts
+
+Use these for the redesigned Collections page. Keep the collection videos unchanged unless you want a new hero film.
+
+1. Collections Hero Poster
+   Prompt: Classic luxury Indian couture runway show, model in champagne embroidered lehenga walking center runway, audience seated in soft shadow on both sides, warm cinematic lighting, deep espresso background, premium fashion week mood, elegant and realistic, wide horizontal composition, no text.
+
+2. New Collections Editorial Image
+   Prompt: Luxury Indian couture model seen from the back wearing an ivory and champagne embroidered lehenga with sheer dupatta, refined palace-inspired interior, warm sepia light, timeless bridal editorial photography, elegant posture, vertical composition, no text.
+
+3. Noor Lehenga Product
+   Prompt: Full-length luxury Indian couture lehenga on a female model, champagne gold embroidery, fitted blouse, sheer dupatta, soft neutral studio background, premium product editorial lighting, entire garment visible, vertical composition, no text.
+
+4. Ira Saree Product
+   Prompt: High-end Indian couture saree in silver ivory and champagne tones, delicate beadwork, elegant female model standing full length, minimal warm studio backdrop, refined fashion house campaign, vertical product image, no text.
+
+5. Mehar Anarkali Product
+   Prompt: Luxury Indian anarkali gown in muted gold and ivory embroidery, long graceful silhouette, sheer sleeves, female model full length, classic atelier studio lighting, premium couture product photography, vertical composition, no text.
+
+6. Zara Sharara Set Product
+   Prompt: Elegant Indian sharara set in rose champagne and antique gold embroidery, model wearing dupatta, refined occasionwear styling, warm neutral backdrop, luxury couture campaign image, full outfit visible, vertical composition, no text.
+
+7. Summer Collection 2026 Feature
+   Prompt: Cinematic luxury Indian couture editorial, female model in richly embroidered champagne outfit adjusting earrings or dupatta, dark warm background, golden hour light, dramatic but refined, premium fashion campaign, wide horizontal composition, no text.
+
+8. Bridal World Tile
+   Prompt: Indian bridal couture portrait, model in heirloom ivory and gold lehenga with veil, soft shadowed heritage interior, timeless luxury mood, warm sepia tones, vertical editorial tile, no text.
+
+9. Cocktail World Tile
+   Prompt: Modern Indian cocktail couture look, model in sculptural embellished evening set, champagne and pearl tones, intimate lounge-like interior, refined dramatic lighting, premium fashion editorial, vertical tile, no text.
+
+10. Mens Ceremonial World Tile
+    Prompt: Luxury Indian mens ceremonial sherwani, male model seated or standing in warm atelier interior, ivory and gold embroidery, tailored traditional silhouette, premium classic fashion photography, vertical tile, no text.
+
+11. Atelier Classics World Tile
+    Prompt: Close-up of couture fabric, ivory embroidery, pearls, zari, and hand-finished border, elegant macro detail with warm shadows, timeless Indian atelier craftsmanship, vertical editorial tile, no text.
+
+12. Collections Appointment Background
+    Prompt: Dark luxury couture atelier interior with dress form, hanging garments, flowers, and warm amber lights, refined Indian fashion house mood, cinematic shadows, elegant appointment consultation atmosphere, wide horizontal composition, no text.
